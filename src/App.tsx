@@ -64,18 +64,18 @@ export default function App() {
         animate={{ opacity: 1, y: 0 }}
         className="bg-white w-full max-w-[210mm] min-h-[297mm] rounded-[2rem] shadow-2xl overflow-hidden relative print-only-shadow-none flex flex-col"
       >
-        <div className="p-8 md:p-12 flex-1 flex flex-col">
+        <div className="p-6 md:p-8 flex-1 flex flex-col">
           
           {/* Section 1: Reading */}
-          <section className="mb-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="bg-pink-100 p-2.5 rounded-full border-4 border-pink-300 text-pink-500 transform -rotate-6 shadow-sm">
-                <BookOpen size={24} />
+          <section className="mb-4">
+            <div className="flex items-center gap-2 mb-3 mt-1">
+              <div className="bg-pink-100 p-2 rounded-full border-4 border-pink-300 text-pink-500 transform -rotate-6 shadow-sm">
+                <BookOpen size={20} />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800">1. Read and translate:</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-800">1. Read and translate:</h2>
             </div>
 
-            <div className="bg-blue-50/70 rounded-[1.5rem] p-4 md:p-6 border-4 border-blue-100 space-y-3 shadow-inner">
+            <div className="bg-blue-50/70 rounded-2xl p-3 md:p-4 border-4 border-blue-100 space-y-2.5 shadow-inner">
               
               <Bubble emoji="👧" name="Sarah" color="pink" align="left">
                 Hello. My name is Sarah. What is your name?
@@ -118,14 +118,14 @@ export default function App() {
 
           {/* Section 2: Writing */}
           <section className="flex-1 flex flex-col">
-             <div className="flex items-center gap-3 mb-4 mt-2">
-              <div className="bg-green-100 p-2.5 rounded-full border-4 border-green-300 text-green-600 transform rotate-6 shadow-sm">
-                <PenLine size={24} />
+             <div className="flex items-center gap-2 mb-3 mt-1">
+              <div className="bg-green-100 p-2 rounded-full border-4 border-green-300 text-green-600 transform rotate-6 shadow-sm">
+                <PenLine size={20} />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800">2. Write about yourself:</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-800">2. Write about yourself:</h2>
             </div>
             
-            <div className="bg-amber-50/50 flex-1 rounded-3xl border-4 border-amber-200 p-8 md:p-10 shadow-inner flex flex-col justify-start space-y-12 min-h-[300px] relative mt-2 mb-4">
+            <div className="bg-amber-50/50 flex-1 rounded-2xl border-4 border-amber-200 p-6 md:p-8 shadow-inner flex flex-col justify-start space-y-10 min-h-[200px] relative mt-1 mb-2">
                <div className="w-full border-b-4 border-dotted border-gray-400"></div>
                <div className="w-full border-b-4 border-dotted border-gray-400"></div>
                <div className="w-full border-b-4 border-dotted border-gray-400"></div>
@@ -245,12 +245,12 @@ function Bubble({ emoji, name, color, align, children }: BubbleProps) {
   
   return (
     <div className={`flex w-full ${isLeft ? 'justify-start' : 'justify-end'}`}>
-      <div className={`flex gap-3 max-w-[85%] ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}>
+      <div className={`flex gap-2 max-w-[85%] ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}>
         <div className="flex flex-col items-center justify-end">
-          <div className="text-2xl md:text-3xl bg-white rounded-full p-2 border-2 border-slate-100 shadow-sm leading-none shrink-0">{emoji}</div>
-          <span className="text-[10px] md:text-xs font-bold text-gray-500 mt-1 uppercase tracking-wide">{name}</span>
+          <div className="text-xl md:text-2xl bg-white rounded-full p-1.5 border-2 border-slate-100 shadow-sm leading-none shrink-0">{emoji}</div>
+          <span className="text-[9px] md:text-[10px] font-bold text-gray-500 mt-0.5 uppercase tracking-wide">{name}</span>
         </div>
-        <div className={`px-4 py-2 md:px-5 md:py-3 rounded-2xl md:rounded-[1.5rem] ${bgColor} ${borderColor} border-2 shadow-sm text-base md:text-lg font-bold ${textColor} flex items-center relative ${isLeft ? 'rounded-bl-none' : 'rounded-br-none'}`}>
+        <div className={`px-3 py-1.5 md:px-4 md:py-2 rounded-xl md:rounded-2xl ${bgColor} ${borderColor} border-2 shadow-sm text-sm md:text-base font-bold ${textColor} flex items-center relative ${isLeft ? 'rounded-bl-none' : 'rounded-br-none'}`}>
             {children}
         </div>
       </div>
