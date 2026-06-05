@@ -1,0 +1,8 @@
+{
+  "name": "English for Kids - Book Page",
+  "description": "A colorful, interactive, and printable English learning page for children.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
